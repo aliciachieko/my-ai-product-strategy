@@ -1,10 +1,10 @@
-Prototype: PROTOTYPE_URL
+Prototype: https://aliciachieko.github.io/my-ai-product-strategy/prototype/
 
 What I built: A one-page MindBridge prototype where a neurodivergent student adds class material, chooses the learning format that works for them, and receives a clear adapted lesson with the big idea, plain steps, a story example, practice questions, and a one-page study sheet.
 
-Tool used: Other
+Tool used: GitHub Pages static HTML
 
-Prototype link: PROTOTYPE_URL
+Prototype link: https://aliciachieko.github.io/my-ai-product-strategy/prototype/
 
 AI Value Archetype: Copilot
 
