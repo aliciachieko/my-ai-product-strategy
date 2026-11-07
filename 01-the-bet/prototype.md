@@ -1,19 +1,13 @@
-# The Prototype Bet
+Prototype: PROTOTYPE_URL
 
-## What I Built
-<!-- One sentence: what does this prototype demonstrate? -->
+What I built: A one-page MindBridge prototype where a neurodivergent student adds class material, chooses the learning format that works for them, and receives a clear adapted lesson with the big idea, plain steps, a story example, practice questions, and a one-page study sheet.
 
-## Tool Used
-<!-- v0 / Cursor / Lovable / other -->
+Tool used: Other
 
-## Prototype Link
-<!-- Paste the shareable URL -->
+Prototype link: PROTOTYPE_URL
 
-## AI Value Archetype
-<!-- Automator / Copilot / Oracle / Creator / Orchestrator -->
+AI Value Archetype: Copilot
 
-## The Bet in One Sentence
-<!-- What you're building, for whom, why now -->
+Bet in 1 sentence: We believe AI that converts lectures, slides, readings, and assignments into learner-matched plain language, steps, visuals, stories, and practice changes neurodivergent learners from passive rereading and shutdown to active completion, so they understand difficult concepts faster and perform better in class.
 
-## Kill Criteria
-<!-- When would you stop? What evidence would kill this bet? -->
+Kill criteria: Stop or pivot if, in a 3-week pilot with 20 target learners, fewer than 40% complete an adapted lesson, adapted lessons do not outperform the original material on concept checks, or expert review finds material factual errors or key omissions in more than 10% of outputs.

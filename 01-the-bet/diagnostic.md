@@ -1,44 +1,30 @@
-# Three-Axis Vulnerability Diagnostic
+# MindBridge: Three-Axis Diagnostic
 
-## Product
-<!-- Name the product you're diagnosing. Real product at your company — not a hypothetical. -->
+Product: MindBridge
+Target user: Neurodivergent high school and college students who struggle to understand difficult class material in the format it was originally taught.
 
-**Product:**
-**Your Role:**
+## Contextual Moat: 3/5
 
----
+Rationale: MindBridge starts with features that can be copied, such as summarization and study guides. The moat gets stronger if it owns the full learning workflow: source material from the class, a learner profile, assignment context, preferred formats, misconception history, and teacher-aligned practice.
 
-## Scores
+Named attacker: Canvas and other LMS platforms adding built-in AI study tools inside the course workflow.
 
-### Contextual Moat — __/5
-*Workflow depth × switching cost. Would users leave in a weekend if a competitor showed up?*
+## Data Advantage: 2/5
 
-**Score rationale:**
+Rationale: At launch, MindBridge mostly uses the learner's own uploaded class material, so the data advantage is weak. It can compound over time if, with consent and strong privacy controls, MindBridge learns which adaptations fix which misconceptions for which learners and which formats lead to better concept checks.
 
-**Named attacker (from partner challenge):**
+Named attacker: ChatGPT, Claude, and Gemini with file upload, memory, and general tutoring features.
 
----
+## Platform Exposure: 4/5 risk
 
-### Data Advantage — __/5
-*Proprietary signal that compounds with usage. What do you see that OpenAI doesn't?*
+Rationale: Platform exposure is high. Google, Microsoft, Apple, OpenAI, and LMS vendors can bundle good enough summarization, read-aloud, explanation, and quiz generation into tools students already use. MindBridge has to win on workflow depth, trust, personalization, and measured learning outcomes, not basic AI generation.
 
-**Score rationale:**
-
-**Named attacker (from partner challenge):**
-
----
-
-### Platform Exposure — __/5
-*Encroachment risk × pivot speed. If Apple/Google/OpenAI ships your hero feature native — then what?*
-
-**Score rationale:**
-
-**Named attacker (from partner challenge):**
-
----
+Named attacker: Microsoft Copilot and Google Gemini inside school productivity suites.
 
 ## Top Vulnerability
-<!-- One line: what's the single biggest strategic risk? -->
 
-## Confidence Level
-<!-- H / M / L — how confident are you in this bet after the diagnostic? -->
+A platform or LMS bundles good enough AI adaptation before MindBridge builds a trusted learner profile and outcome data set.
+
+## Confidence: Medium
+
+The learner pain is clear, but there is no pilot evidence yet on lesson completion, comprehension gains, repeat use, factual reliability, or willingness to pay.
