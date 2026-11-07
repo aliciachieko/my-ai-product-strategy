@@ -1,102 +1,16 @@
-# My AI Product Strategy
+# AI Product Strategy: MindBridge
 
-> A living strategy built across 6 sessions. Each module adds one component. By Module 6, this repo IS your strategy — version-controlled, board-ready, portable.
+MindBridge is an AI learning companion for neurodivergent learners. It ingests lectures, slides, readings, videos, and assignments, then rebuilds the material into plain-language explanations, step-by-step breakdowns, stories, visuals, practice questions, checklists, and one-page study guides matched to how each learner processes information.
 
----
+## Component 1: The Bet
 
-## Strategy at a Glance
+Bet: We believe AI that converts class material into learner-matched formats changes neurodivergent learners from passive rereading and shutdown to active completion, so they understand difficult concepts faster and perform better in class.
 
-| Component | Module | Status | Key Artifact |
-|-----------|--------|--------|-------------|
-| **The Bet** | M1 | [ ] | `01-the-bet/` |
-| **The Moat** | M2 | [ ] | `02-the-moat/` |
-| **The Margin** | M3 | [ ] | `03-the-margin/` |
-| **The Contract** | M4 | [ ] | `04-the-contract/` |
-| **The Guardrails** | M5 | [ ] | `05-the-guardrails/` |
-| **The Pitch** | M6 | [ ] | `06-the-pitch/` |
+Confidence: Medium
 
----
+Kill criteria: Stop or pivot if a 3-week pilot with 20 target learners shows low completion, no comprehension gain over the original material, or unacceptable factual errors or omissions in adapted outputs.
 
-## The Bet (M1)
+## Files
 
-**What we're building, for whom, why now.**
-
-- **Product:**
-- **AI Value Archetype:**
-- **Vulnerability Scores:** Moat __/5 · Data __/5 · Platform __/5
-- **Top Risk:**
-- **Confidence:** H / M / L
-- **Prototype:** [link]
-- **Kill Criteria:**
-
-→ Details: [`01-the-bet/`](01-the-bet/)
-
----
-
-## The Moat (M2)
-
-**Why this won't get copied in 6 months.**
-
-- **Data Flywheel Score:** __/20
-- **Weakest Loop:**
-- **Competitive Position:** [describe axes + placement]
-- **Encroachment Defense:**
-- **Vendor Portability:** Ready / Partial / Locked
-
-→ Details: [`02-the-moat/`](02-the-moat/)
-
----
-
-## The Margin (M3)
-
-**Will this make money or bleed it?**
-
-- **Gross Margin (current):**
-- **Gross Margin (AI-adjusted):**
-- **Pricing Model:**
-- **Cascading Strategy:**
-- **Break-even at:**
-
-→ Details: [`03-the-margin/`](03-the-margin/)
-
----
-
-## The Contract (M4)
-
-**Why users will trust a probabilistic system.**
-
-- **Reliability Target:**
-- **Golden Dataset:** __ rows, __ adversarial
-- **Confidence UX:** [approach]
-- **HITL Architecture:**
-- **Failure Mode Coverage:**
-
-→ Details: [`04-the-contract/`](04-the-contract/)
-
----
-
-## The Guardrails (M5)
-
-**What breaks when this scales — and what compounds.**
-
-- **Compounding System:** [describe feedback loops]
-- **Governance Posture:** [approach]
-- **Shadow AI Status:** __ tools found, __ triaged
-- **Agent Boundaries:**
-- **Regulatory Exposure:**
-
-→ Details: [`05-the-guardrails/`](05-the-guardrails/)
-
----
-
-## The Pitch (M6)
-
-**How you get this funded, shipped, and adopted.**
-
-- **Horizon 1 (Now):**
-- **Horizon 2 (Next):**
-- **Horizon 3 (Bet):**
-- **Board Narrative:** [1-sentence thesis]
-- **Key Metric:**
-
-→ Details: [`06-the-pitch/`](06-the-pitch/)
+- 01-the-bet/diagnostic.md
+- 01-the-bet/prototype.md
