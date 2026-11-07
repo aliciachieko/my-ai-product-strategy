@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MindBridge Prototype</title>
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0b1020;
+    --panel: #121a2f;
+    --panel2: #17233d;
+    --text: #eef3ff;
+    --muted: #a9b7d0;
+    --line: #2a3a5f;
+    --accent: #7dd3fc;
+    --accent2: #c4b5fd;
+    --good: #86efac;
+    --warn: #fde68a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top left, #1d2b52 0, var(--bg) 42rem);
+    color: var(--text);
+  }
+  header {
+    padding: 28px clamp(18px, 4vw, 44px) 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .brand { display: flex; gap: 14px; align-items: center; }
+  .logo {
+    width: 46px; height: 46px; border-radius: 14px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    display: grid; place-items: center; color: #08111f; font-weight: 900; font-size: 22px;
+  }
+  h1 { margin: 0; font-size: clamp(28px, 4vw, 44px); letter-spacing: -0.04em; }
+  .tagline { color: var(--muted); margin-top: 4px; font-size: 16px; }
+  .badge {
+    border: 1px solid var(--line); background: rgba(18,26,47,.75); color: var(--muted);
+    padding: 8px 11px; border-radius: 999px; font-size: 13px; white-space: nowrap;
+  }
+  main {
+    display: grid; grid-template-columns: minmax(320px, 430px) 1fr; gap: 18px;
+    padding: 18px clamp(18px, 4vw, 44px) 34px;
+  }
+  @media (max-width: 880px) { main { grid-template-columns: 1fr; } header { flex-direction: column; } }
+  .card {
+    background: linear-gradient(180deg, rgba(23,35,61,.96), rgba(18,26,47,.96));
+    border: 1px solid var(--line); border-radius: 22px; padding: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.28);
+  }
+  h2 { margin: 0 0 12px; font-size: 20px; letter-spacing: -0.02em; }
+  label { display: block; color: var(--muted); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; margin: 16px 0 8px; }
+  input, textarea, select {
+    width: 100%; border: 1px solid var(--line); border-radius: 14px; background: #0d1528; color: var(--text);
+    padding: 12px; font: inherit; line-height: 1.45;
+  }
+  textarea { min-height: 168px; resize: vertical; }
+  .chips { display: flex; flex-wrap: wrap; gap: 9px; }
+  .chip {
+    border: 1px solid var(--line); background: #0d1528; color: var(--text); border-radius: 999px;
+    padding: 9px 12px; cursor: pointer; font-weight: 700;
+  }
+  .chip[aria-pressed="true"] { background: var(--accent); color: #06121f; border-color: var(--accent); }
+  .adapt {
+    width: 100%; margin-top: 20px; border: 0; border-radius: 15px; padding: 14px 16px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #08111f;
+    font-weight: 900; font-size: 16px; cursor: pointer;
+  }
+  .hint { color: var(--muted); font-size: 13px; line-height: 1.5; margin-top: 12px; }
+  .output-head { display: flex; justify-content: space-between; gap: 14px; align-items: start; }
+  .pill { background: rgba(125,211,252,.14); color: var(--accent); border: 1px solid rgba(125,211,252,.35); padding: 6px 9px; border-radius: 999px; font-size: 12px; font-weight: 800; white-space: nowrap; }
+  .big-idea { font-size: clamp(21px, 3vw, 31px); line-height: 1.16; letter-spacing: -0.03em; margin: 8px 0 12px; }
+  .summary { color: var(--muted); line-height: 1.65; }
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 16px; }
+  @media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
+  .mini { background: rgba(13,21,40,.72); border: 1px solid var(--line); border-radius: 18px; padding: 16px; }
+  .mini h3 { margin: 0 0 10px; font-size: 16px; }
+  .mini p, .mini li { color: var(--muted); line-height: 1.55; }
+  .mini ul, .mini ol { margin: 0; padding-left: 20px; }
+  .map { display: grid; gap: 9px; }
+  .node { border: 1px solid var(--line); background: #101b34; padding: 10px 12px; border-radius: 13px; font-weight: 800; }
+  .node span { display: block; color: var(--muted); font-weight: 500; margin-top: 3px; }
+  .question { border-top: 1px solid var(--line); padding-top: 11px; margin-top: 11px; }
+  .question:first-of-type { border-top: 0; padding-top: 0; margin-top: 0; }
+  details { margin-top: 8px; color: var(--good); }
+  .sheet { background: #f8fafc; color: #111827; border-radius: 18px; padding: 18px; }
+  .sheet h3 { margin-top: 0; }
+  .sheet li, .sheet p { color: #334155; }
+  .status { display: none; margin-top: 14px; border: 1px solid rgba(134,239,172,.4); background: rgba(134,239,172,.1); color: var(--good); padding: 11px 12px; border-radius: 13px; font-weight: 800; }
+  footer { color: var(--muted); padding: 0 clamp(18px, 4vw, 44px) 28px; line-height: 1.55; }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="logo">M</div>
+    <div>
+      <h1>MindBridge</h1>
+      <div class="tagline">Built for every kind of mind.</div>
+    </div>
+  </div>
+  <div class="badge">AI Product Strategy prototype</div>
+</header>
+
+<main>
+  <section class="card" aria-label="Input">
+    <h2>Start with your class material</h2>
+    <label for="className">Class</label>
+    <input id="className" value="Sociology: Health and Inequality" />
+
+    <label for="material">Paste slides, notes, or reading text</label>
+    <textarea id="material">Social determinants of health are the conditions where people are born, grow, live, work, and age. These conditions shape health outcomes more than individual choices alone. Income, education, housing, food access, transportation, and neighborhood safety can change stress, exposure to illness, and access to care. Policy design matters because programs decide who gets help, how hard help is to access, and whether support arrives before a crisis.</textarea>
+
+    <label>How do you want to learn this?</label>
+    <div class="chips" role="group" aria-label="Learning format">
+      <button class="chip" data-format="steps" aria-pressed="true">Plain steps</button>
+      <button class="chip" data-format="story" aria-pressed="false">Story</button>
+      <button class="chip" data-format="visual" aria-pressed="false">Visual map</button>
+      <button class="chip" data-format="practice" aria-pressed="false">Practice</button>
+    </div>
+
+    <button class="adapt" id="adaptBtn">Adapt this for me</button>
+    <div class="status" id="status">Adapted into your selected format.</div>
+    <p class="hint">MindBridge keeps the original source visible, adapts the format, then checks understanding before moving on.</p>
+  </section>
+
+  <section class="card" aria-label="Adapted lesson">
+    <div class="output-head">
+      <div>
+        <div class="pill" id="formatPill">Plain steps first</div>
+        <div class="big-idea">Health is shaped by the conditions around a person, not only by personal choices.</div>
+      </div>
+    </div>
+    <p class="summary" id="leadText">MindBridge turned the dense paragraph into a lesson you can finish: one big idea, clear steps, an everyday story, and a quick check.</p>
+
+    <div class="grid">
+      <article class="mini" id="stepsCard">
+        <h3>Plain steps</h3>
+        <ol>
+          <li>Start with the big idea: life conditions shape health.</li>
+          <li>Name the conditions: money, school, housing, food, rides, safety.</li>
+          <li>Connect the path: conditions change stress, risk, and access to care.</li>
+          <li>End with policy: rules decide who gets help and how hard help is to reach.</li>
+        </ol>
+      </article>
+
+      <article class="mini" id="storyCard">
+        <h3>Story version</h3>
+        <p>Sam has asthma. His apartment has mold, the bus is unreliable, and the clinic is across town. His illness is medical, but the reasons it keeps getting worse are built into his daily conditions.</p>
+      </article>
+
+      <article class="mini" id="visualCard">
+        <h3>Visual map</h3>
+        <div class="map">
+          <div class="node">Life conditions <span>income, housing, food, school, safety</span></div>
+          <div class="node">Daily pressure <span>stress, exposure, missed care</span></div>
+          <div class="node">Health outcome <span>illness, recovery, long-term health</span></div>
+        </div>
+      </article>
+
+      <article class="mini" id="practiceCard">
+        <h3>Check your understanding</h3>
+        <div class="question">
+          <p><strong>1.</strong> Which is a social determinant of health?</p>
+          <p>A. A person's favorite color<br />B. Safe housing<br />C. A test date</p>
+          <details><summary>Show answer</summary>B. Safe housing shapes stress, exposure, and health.</details>
+        </div>
+        <div class="question">
+          <p><strong>2.</strong> Why does policy design matter?</p>
+          <details><summary>Show answer</summary>It decides who gets help, how hard help is to access, and whether help arrives early enough.</details>
+        </div>
+      </article>
+    </div>
+
+    <article class="sheet" style="margin-top:14px">
+      <h3>One-page study sheet</h3>
+      <p><strong>Write this first:</strong> Social determinants of health are life conditions that shape health outcomes.</p>
+      <ul>
+        <li><strong>Key list:</strong> income, education, housing, food, transportation, safety.</li>
+        <li><strong>Mechanism:</strong> conditions affect stress, exposure, and access to care.</li>
+        <li><strong>Exam move:</strong> answer first, explain the path, name a concrete condition.</li>
+      </ul>
+    </article>
+  </section>
+</main>
+
+<footer>
+  Prototype concept: MindBridge is a Copilot for neurodivergent learners. It does not replace the class material. It rebuilds the material into the format the learner can use, then verifies understanding.
+</footer>
+<script>
+  const labels = {
+    steps: ['Plain steps first', 'MindBridge turned the dense paragraph into a lesson you can finish: one big idea, clear steps, an everyday story, and a quick check.', 'stepsCard'],
+    story: ['Story first', 'MindBridge leads with a concrete story, then pulls the concept out of the story so it is easier to remember.', 'storyCard'],
+    visual: ['Visual map first', 'MindBridge shows the relationship as a simple map: conditions create pressure, and pressure shapes health outcomes.', 'visualCard'],
+    practice: ['Practice first', 'MindBridge checks understanding early, before the learner spends more time rereading the original text.', 'practiceCard']
+  };
+  const chips = [...document.querySelectorAll('.chip')];
+  const pill = document.getElementById('formatPill');
+  const lead = document.getElementById('leadText');
+  const status = document.getElementById('status');
+  let selected = 'steps';
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      selected = chip.dataset.format;
+      chips.forEach(c => c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'));
+      const [label, text, cardId] = labels[selected];
+      pill.textContent = label;
+      lead.textContent = text;
+      document.querySelectorAll('.mini').forEach(card => card.style.outline = 'none');
+      document.getElementById(cardId).style.outline = '2px solid rgba(125,211,252,.65)';
+      status.style.display = 'none';
+    });
+  });
+  document.getElementById('adaptBtn').addEventListener('click', () => {
+    status.style.display = 'block';
+    status.textContent = 'Adapted into your selected format: ' + labels[selected][0] + '.';
+  });
+</script>
+</body>
+</html>
