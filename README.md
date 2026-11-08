@@ -10,7 +10,15 @@ Confidence: Medium
 
 Kill criteria: Stop or pivot if a 3-week pilot with 20 target learners shows low completion, no comprehension gain over the original material, or unacceptable factual errors or omissions in adapted outputs.
 
+## Component 2: The Moat
+
+Data flywheel score: 15/20. Correction and Preference are the strongest loops because MindBridge is designed to reuse learner corrections and format preferences instead of starting blank each session. The weakest loop is Domain Context at 2/5: learning patterns can transfer across subjects, but subject mastery mostly stays local to the course.
+
+Kill switch: Portability is Partial. Prompts, product logic, output formats, learner profile schema, and eval criteria are portable. Hosting, authentication, stored learner data, and provider-specific generation behavior still need abstraction and a tested backup route.
+
 ## Files
 
 - 01-the-bet/diagnostic.md
 - 01-the-bet/prototype.md
+- 02-the-moat/data-flywheel.md
+- 02-the-moat/kill-switch.md
