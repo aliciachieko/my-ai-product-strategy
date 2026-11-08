@@ -34,6 +34,12 @@ Compounding system: Five feedback loops mapped. The broken loop is the learner c
 
 Governance: MindBridge may adapt, explain, quiz, and give feedback on its own. It may not grade, message teachers or parents, share learner data, or make placement or accommodation decisions. Escalation triggers, audit cadence, agent permissions, and a shadow AI audit of the pilot school environment are defined in the file.
 
+## Component 6: The Pitch
+
+Roadmap and board pitch: Horizon 1 ships the persistent learner profile and runs the 20-learner pilot against the Class 1 kill criteria. Horizon 2 adds the school pilot package and the cross-course transfer layer. Horizon 3 builds the outcome evidence engine. The ask is Horizon 1 funding for one quarter, with scale funding gated on the pilot clearing its bars.
+
+Thesis: MindBridge turns the class material learners already have into the format their brain can use, and every correction compounds into a learner profile and outcome record that a bundled platform feature cannot copy. Demo: the working prototype, MindBridge Learning Studio, linked in 01-the-bet/prototype.md.
+
 ## Files
 
 - 01-the-bet/diagnostic.md
@@ -43,3 +49,4 @@ Governance: MindBridge may adapt, explain, quiz, and give feedback on its own. I
 - 03-the-margin/cost-curve.md
 - 04-the-contract/golden-dataset.md
 - 05-the-guardrails/compounding-system.md
+- 06-the-pitch/roadmap.md
