@@ -16,9 +16,16 @@ Data flywheel score: 15/20. Correction and Preference are the strongest loops be
 
 Kill switch: Portability is Partial. Prompts, product logic, output formats, learner profile schema, and eval criteria are portable. Hosting, authentication, stored learner data, and provider-specific generation behavior still need abstraction and a tested backup route.
 
+## Component 3: The Margin
+
+Cost curve: At a $24/month learner price, base AI COGS is $11.50 per active learner per month, for a 52.1% gross margin. The cost curve improves to 62.1% at 10,000 learners if cascading, source reuse, caching, and eval automation hold, but it can go negative if inference costs triple or heavy users are not priced into the right band.
+
+Pricing model: Hybrid. A per-learner base price covers the profile, saved lessons, and standard volume, with Core and Intensive usage bands for school contracts so intensive learners are not silently subsidized by light users.
+
 ## Files
 
 - 01-the-bet/diagnostic.md
 - 01-the-bet/prototype.md
 - 02-the-moat/data-flywheel.md
 - 02-the-moat/kill-switch.md
+- 03-the-margin/cost-curve.md
