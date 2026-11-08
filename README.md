@@ -28,6 +28,12 @@ Reliability contract: MindBridge promises source-grounded learning help, not con
 
 Golden dataset: The spec starts with 10 rows covering core adaptation, practice correction, exact numbers, messy source material, prompt injection, privacy, high-risk health content, and learner corrections. Production target before a paid pilot is 150 golden rows.
 
+## Component 5: The Guardrails
+
+Compounding system: Five feedback loops mapped. The broken loop is the learner correction loop in the current prototype: corrections improve the lesson in front of the learner, then disappear when the session ends. The fix is a persistent, consent-based learner profile before any paid pilot, with every stored correction becoming a golden dataset row.
+
+Governance: MindBridge may adapt, explain, quiz, and give feedback on its own. It may not grade, message teachers or parents, share learner data, or make placement or accommodation decisions. Escalation triggers, audit cadence, agent permissions, and a shadow AI audit of the pilot school environment are defined in the file.
+
 ## Files
 
 - 01-the-bet/diagnostic.md
@@ -36,3 +42,4 @@ Golden dataset: The spec starts with 10 rows covering core adaptation, practice 
 - 02-the-moat/kill-switch.md
 - 03-the-margin/cost-curve.md
 - 04-the-contract/golden-dataset.md
+- 05-the-guardrails/compounding-system.md
