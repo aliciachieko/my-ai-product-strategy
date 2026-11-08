@@ -22,6 +22,12 @@ Cost curve: At a $24/month learner price, base AI COGS is $11.50 per active lear
 
 Pricing model: Hybrid. A per-learner base price covers the profile, saved lessons, and standard volume, with Core and Intensive usage bands for school contracts so intensive learners are not silently subsidized by light users.
 
+## Component 4: The Contract
+
+Reliability contract: MindBridge promises source-grounded learning help, not confident guessing. Targets are at least 92% source-supported claims, fewer than 2% of lessons with an unsupported material claim, standard lesson latency under 45 seconds at p95, and drift held within 2 points week over week without an approved change.
+
+Golden dataset: The spec starts with 10 rows covering core adaptation, practice correction, exact numbers, messy source material, prompt injection, privacy, high-risk health content, and learner corrections. Production target before a paid pilot is 150 golden rows.
+
 ## Files
 
 - 01-the-bet/diagnostic.md
@@ -29,3 +35,4 @@ Pricing model: Hybrid. A per-learner base price covers the profile, saved lesson
 - 02-the-moat/data-flywheel.md
 - 02-the-moat/kill-switch.md
 - 03-the-margin/cost-curve.md
+- 04-the-contract/golden-dataset.md
