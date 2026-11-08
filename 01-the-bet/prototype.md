@@ -1,10 +1,10 @@
-Prototype: https://aliciachieko.github.io/my-ai-product-strategy/prototype/
+Prototype: https://mindbridge-learning-paths.lovable.app/
 
-What I built: A one-page MindBridge prototype where a neurodivergent student adds class material, chooses the learning format that works for them, and receives a clear adapted lesson with the big idea, plain steps, a story example, practice questions, and a one-page study sheet.
+What I built: A one-page MindBridge prototype built in Lovable where a neurodivergent student adds class material, chooses the learning format that works for them, and receives a clear adapted lesson with the big idea, plain steps, a story example, practice questions, and a one-page study sheet.
 
-Tool used: GitHub Pages static HTML
+Tool used: Lovable
 
-Prototype link: https://aliciachieko.github.io/my-ai-product-strategy/prototype/
+Prototype link: https://mindbridge-learning-paths.lovable.app/
 
 AI Value Archetype: Copilot
 
